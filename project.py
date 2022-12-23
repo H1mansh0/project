@@ -37,8 +37,12 @@ def roots_of_polynomial(coefs: list[int]):
     >>> roots_of_polynomial([-15288, 7784, -926, 4, 2])
     [-26, 3, 7, 14]
     '''
+    posible = []
+    for elements in range(abs(lst[0])):
+    if lst%elements==0:
+        posible.append(elements)
     roots = []
-    for _i in range(-1000, 1001):
+    for _i in posible:
         result = 0
         for deg, coef in enumerate(coefs):
             result += coef*(_i**deg)
